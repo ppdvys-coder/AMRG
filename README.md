@@ -8,7 +8,8 @@ The whole site is a single self-contained `index.html`:
 
 - One inline `<style>` and one inline `<script>` — no build step, no dependencies
 - Images embedded as data URIs
-- Bilingual EN/TH, toggled in the header (preference persists in the browser)
+- Bilingual EN/TH, toggled in the header (resets to default on reload — the
+  choice is not stored)
 - Client-side routing via URL hash (`#/publications`, `#/about/people`, …)
 
 Routes: `home`, `project`, `courses`, `publications`, `resources`, `collaboration`,
