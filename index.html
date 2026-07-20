@@ -526,6 +526,14 @@ a.cm:hover{border-color:var(--chula);color:var(--chula)}
 .lg.key .lg-name{font-weight:500;color:var(--ink)}
 .lg-y{font-family:var(--mono);font-size:9.5px;color:var(--grey-2);letter-spacing:.02em}
 
+.pc-note{font-size:13px;color:#3c3c39;margin-top:5px}
+.pc-note:lang(th){font-family:'IBM Plex Sans Thai',var(--sans)}
+.awl{display:flex;flex-direction:column}
+.awi{display:grid;grid-template-columns:44px 1fr;gap:12px;padding:7px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.awi:first-child{border-top:0}
+.awy{font-family:var(--mono);font-size:10.5px;color:var(--chula)}
+.awt{font-size:13px;line-height:1.45}
+
 </style>
 
 <header class="hd">
@@ -791,29 +799,37 @@ const PE = [
  {id:"vl",
   en:"Vikrom Laovisutthichai", th:"ดร. วิกรม เหล่าวิสุทธิชัย",
   role:["Assistant Professor","ผู้ช่วยศาสตราจารย์"],
-  img:"https://www.arch.arch.chula.ac.th/wp/wp-content/uploads/2022/03/VikromL.jpg",
-  edu:[["B.Arch. (1st Hons, Gold Medal), Chulalongkorn University","สถ.บ. (เกียรตินิยม เหรียญทอง) จุฬาลงกรณ์มหาวิทยาลัย"],
-       ["M.Arch. (Architecture), Chulalongkorn University","สถ.ม. (สถาปัตยกรรม) จุฬาลงกรณ์มหาวิทยาลัย"]],
-  ri:[["Prefabricated Construction","การก่อสร้างด้วยชิ้นส่วนสำเร็จรูป"]],
-  em:"Vikrom.L@chula.ac.th",
-  gs:"https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=Vikrom+Laovisutthichai&btnG=",
-  dp:"https://www.arch.arch.chula.ac.th/people/vikrom-laovisutthichai/",
+  img:"https://www.arch.chula.ac.th/archdb/photos/bd212d9fe398ed5ed1d165fee8422869.jpg",
+  note:["Assistant Dean, Faculty of Architecture","ผู้ช่วยคณบดี คณะสถาปัตยกรรมศาสตร์"],
+  edu:[["B.Arch. (First Class Honours, Gold Medal), Chulalongkorn University, 2016","สถ.บ. (เกียรตินิยมอันดับหนึ่ง เหรียญทอง) จุฬาลงกรณ์มหาวิทยาลัย 2559"],
+       ["M.Arch., Chulalongkorn University, 2017","สถ.ม. จุฬาลงกรณ์มหาวิทยาลัย 2560"],
+       ["Ph.D., The University of Hong Kong, 2023","ปริญญาเอก มหาวิทยาลัยฮ่องกง 2566"],
+       ["Visiting PhD, National University of Singapore, 2023","นักวิจัยแลกเปลี่ยนระดับปริญญาเอก National University of Singapore 2566"]],
+  ri:[["Design for Manufacturing and Assembly (DfMA)","การออกแบบเพื่อการผลิตและประกอบ (DfMA)"],
+      ["Prefabricated and Modular Construction","การก่อสร้างด้วยชิ้นส่วนสำเร็จรูปและระบบโมดูลาร์"],
+      ["Knowledge Management in Architectural Design","การจัดการความรู้ในการออกแบบสถาปัตยกรรม"]],
+  em:"vikrom.l@chula.ac.th", gs:null,
+  dp:"https://www.arch.chula.ac.th/archdb/index.php?view=info&idInstr=106&idDep=2",
   ws:["01"],
+  awards:[
+   ["2025","CDAST Award, Architecture (New Generation) — Council of Deans of Architecture Schools of Thailand","รางวัลดีเยี่ยม สาขาสถาปัตยกรรม (รุ่นใหม่) CDAST Awards 2025"],
+   ["2025","Outstanding Young Researcher, Social Sciences — Chulalongkorn University","รางวัลนักวิจัยรุ่นเยาว์ดีเด่น สาขาสังคมศาสตร์ จุฬาฯ"],
+   ["2023","Most Cited Paper 2020, Architectural Engineering and Design Management (Scopus Q1)","บทความที่ถูกอ้างอิงสูงสุด ปี 2020 (Scopus Q1)"]],
   pub:[
-   {y:"2023",t:"Conference Proceedings",en:"Design for manufacture and assembly (DfMA) communication network and the impact of COVID-19",v:"CRIOCM 2022, 27th International Symposium"},
    {y:"2023",t:"Research Article",en:"Hospital design principles implementation: Reflections from practitioners in Thailand",v:"Asian Architecture and Building Engineering"},
+   {y:"2023",t:"Conference Proceedings",en:"Design for manufacture and assembly (DfMA) communication network and the impact of COVID-19",v:"CRIOCM 2022, 27th International Symposium"},
    {y:"2022",t:"Book Chapter",en:"Building information modeling-enabled design for construction waste minimization",v:"Research Companion to Building Information Modeling, Edward Elgar"},
    {y:"2022",t:"Research Article",en:"Towards greater integration of building information modeling in the architectural design curriculum",v:"Industry and Higher Education"},
    {y:"2022",t:"Research Article",en:"Design for manufacture and assembly (DfMA) in architectural design meetings",v:"Smart and Sustainable Built Environment"},
    {y:"2022",t:"Research Article",en:"การก่อสร้างอาคารด้วยชิ้นส่วนสำเร็จรูป: การทบทวนวรรณกรรมในประเทศไทย",v:"วารสารสถาปัตยกรรม การออกแบบและการก่อสร้าง"},
-   {y:"2021",t:"Book Chapter",en:"Architectural design for manufacturing and assembly for sustainability",v:"Lau, Li, Hao & Lu (eds.)"},
-   {y:"2021",t:"Academic Article",en:"Design for manufacture and assembly (DfMA) enablers for offsite interior design and construction",v:"Building Research & Information"},
+   {y:"2021",t:"Book Chapter",en:"Architectural design for manufacturing and assembly for sustainability",v:"Design and Technological Applications in Sustainable Architecture, Springer"},
+   {y:"2021",t:"Research Article",en:"Design for manufacture and assembly (DfMA) enablers for offsite interior design and construction",v:"Building Research & Information"},
    {y:"2021",t:"Conference Proceedings",en:"CIM-enabled quantitative view assessment in architectural design and space planning",v:"ISARC 2021, 38th International Symposium"},
-   {y:"2021",t:"Conference Proceedings",en:"Design for Excellence in Architecture, Engineering, and Construction: A multi-stakeholder model",v:"CRIOCM 2021"},
+   {y:"2021",t:"Conference Proceedings",en:"Design for excellence in architecture, engineering, and construction: A multi-stakeholder model",v:"CRIOCM 2021"},
    {y:"2020",t:"Research Article",en:"Design for construction waste minimization: Guidelines and practice",v:"Architectural Engineering and Design Management"},
    {y:"2020",t:"Conference Proceedings",en:"Modular construction: Design considerations and opportunities",v:"CRIOCM 2020, Springer"},
    {y:"2019",t:"Conference Proceedings",en:"Architectural design for additive manufacturing construction: Lesson learned from DfAM",v:"CRIOCM 2019, Springer"},
-  ]},
+  ]}
 ];
 /* co-authors named on the 2023 hospital paper but not yet profiled here */
 const COA = [
@@ -850,57 +866,54 @@ PE.push(
    {y:"—",t:"Newspaper Article",en:"Factors Affecting The Selection of Architectural Firms by Real Estate Clients",v:"The Nation"},
   ]},
  {id:"pm",
-  en:"Pornprom Mannontaratana", th:"พรพรหม แม้นนนทรัตน์",
-  role:["Assistant Professor","ผู้ช่วยศาสตราจารย์"],
-  img:"https://www.arch.arch.chula.ac.th/wp/wp-content/uploads/2022/03/PornpromM-768x1152.jpg",
+  en:"Pornprom Mannontaratana", th:"รศ. พรพรหม แม้นนนทรัตน์",
+  role:["Associate Professor","รองศาสตราจารย์"],
+  img:"https://www.arch.chula.ac.th/archdb/photos/b82b085b70765b39229b18233ea96e73.jpg",
   edu:[["B.Arch., Chulalongkorn University","สถ.บ. จุฬาลงกรณ์มหาวิทยาลัย"],
-       ["M.Arch. (Architecture), Chulalongkorn University","สถ.ม. (สถาปัตยกรรม) จุฬาลงกรณ์มหาวิทยาลัย"]],
-  ri:[["Architectural Management","การจัดการโครงการทางสถาปัตยกรรม"],
-      ["Professional Practice","การปฏิบัติวิชาชีพสถาปัตยกรรม"]],
-  em:"Pornprom.M@chula.ac.th", gs:null,
-  dp:"https://www.arch.arch.chula.ac.th/people/pornprom-mannontaratana/",
+       ["M.Arch., Chulalongkorn University","สถ.ม. จุฬาลงกรณ์มหาวิทยาลัย"]],
+  ri:[["Architectural Project Feasibility Study","การศึกษาความเป็นไปได้ของโครงการทางสถาปัตยกรรม"],
+      ["Architectural Practice","การปฏิบัติวิชาชีพสถาปัตยกรรม"],
+      ["Architectural Project Management","การจัดการโครงการทางสถาปัตยกรรม"]],
+  em:"pornprom.m@chula.ac.th", gs:null,
+  dp:"https://www.arch.chula.ac.th/archdb/index.php?view=info&idInstr=74&idDep=2",
   ws:["02"],
   pub:[
    {y:"2020",t:"Research Project",en:"การศึกษาวิจัยและจัดทำเอกสารคู่มือการปฏิบัติวิชาชีพของสถาปนิก ระยะที่ 1 และระยะที่ 2",v:"แหล่งทุน สมาคมสถาปนิกสยาม ในพระบรมราชูปถัมภ์"},
    {y:"2015",t:"Research Project",en:"งานวิจัยรายวิชาเพื่อพัฒนาการเรียนการสอนวิชาฝึกงานสถาปัตยกรรม และการปฏิบัติวิชาชีพสถาปัตยกรรม",v:"รายงานวิจัยฉบับสมบูรณ์"},
    {y:"2015",t:"Research Article",en:"พัฒนาการการปรับปรุงรายวิชาการฝึกงานสถาปัตยกรรม ภาควิชาสถาปัตยกรรมศาสตร์ จุฬาฯ",v:"วารสารวิชาการ คณะสถาปัตยกรรมศาสตร์ จุฬาฯ"},
-   {y:"2015",t:"Academic Article",en:"การจัดการสถาปัตยกรรม : Architectural Management",v:"วารสารวิชาการ คณะสถาปัตยกรรมศาสตร์ จุฬาฯ"},
-   {y:"2014",t:"Research Article",en:"ปัจจัยที่มีผลกระทบต่อแนวทางการปฏิบัติวิชาชีพและการบริการในการรับงานออกแบบจากต่างประเทศของสถาปนิกไทย",v:"สาระศาสตร์"},
-   {y:"2014",t:"Academic Article",en:"การฟื้นฟูชุมชนพักอาศัยโดยการมีส่วนร่วมในประเทศเดนมาร์ก",v:"วารสารวิชาการ คณะสถาปัตยกรรมศาสตร์ จุฬาฯ"},
    {y:"2012",t:"Research Article",en:"ความสัมพันธ์ของการพัฒนาวิชาชีพต่อเนื่องของผู้ประกอบวิชาชีพสถาปัตยกรรม (พวต) กับโครงการสถาปนิกอาเซียน",v:"วารสารวิชาการ คณะสถาปัตยกรรมศาสตร์ จุฬาฯ"},
-  ]});
-
-/* co-authors still without a profile here */
-COA.length = 0;
-COA.push(
- {en:"Kawin Dhanakoses",th:"กวิน ธนโกเศศ",u:"https://www.arch.arch.chula.ac.th/people/kawin-dhanakoses/"},
- {en:"Pakwan Roopkaew",th:"พาขวัญ รูปแก้ว",u:null},
- {en:"P. Viryasiri",th:"พ. วิรยศิริ",u:null},
- {en:"Thanadech Srikram",th:"ธนเดช ศรีคราม",u:null},
-);
-
-PE.push(
+   {y:"2005",t:"Academic Article",en:"การจัดการสถาปัตยกรรม : Architectural Management",v:"วารสารวิชาการ คณะสถาปัตยกรรมศาสตร์ จุฬาฯ"},
+   {y:"2004",t:"Research Article",en:"ปัจจัยที่มีผลกระทบต่อแนวทางการปฏิบัติวิชาชีพและการบริการในการรับงานออกแบบจากต่างประเทศของสถาปนิกไทย",v:"สาระศาสตร์ ครั้งที่ 8"},
+   {y:"2004",t:"Academic Article",en:"การฟื้นฟูชุมชนพักอาศัยโดยการมีส่วนร่วมในประเทศเดนมาร์ก",v:"วารสารวิชาการ คณะสถาปัตยกรรมศาสตร์ จุฬาฯ"},
+  ]},
  {id:"kd",
-  en:"Kawin Dhanakoses", th:"กวิน ธนโกเศศ",
+  en:"Kawin Dhanakoses", th:"ผศ. ดร.กวิน ธนโกเศศ",
   role:["Assistant Professor","ผู้ช่วยศาสตราจารย์"],
-  img:"https://www.arch.arch.chula.ac.th/wp/wp-content/uploads/2022/03/KawinD.jpg",
+  img:"https://www.arch.chula.ac.th/archdb/photos/ae3522c95117fc34c1d7ca258d60c1c0.jpg",
   grp:["Architectural Design","การออกแบบสถาปัตยกรรม"],
-  edu:[["B.Arch. (Hons), Chulalongkorn University","สถ.บ. (เกียรตินิยม) จุฬาลงกรณ์มหาวิทยาลัย"],
-       ["M.Sc. (Advanced Sustainable Design), The University of Edinburgh","M.Sc. (Advanced Sustainable Design) มหาวิทยาลัยเอดินบะระ สหราชอาณาจักร"]],
-  ri:[["Life Sciences and Biomedical Laboratory Design","การออกแบบอาคารและห้องปฏิบัติการทางวิทยาศาสตร์ ชีวภาพและชีวการแพทย์"],
-      ["Healthcare Facilities Design","การออกแบบอาคารสถานพยาบาล"]],
-  em:"Kawin.D@chula.ac.th", orcid:"0000-0001-5219-0502", gs:null,
-  dp:"https://www.arch.arch.chula.ac.th/people/kawin-dhanakoses/",
+  edu:[["B.Arch., Chulalongkorn University","สถ.บ. จุฬาลงกรณ์มหาวิทยาลัย"],
+       ["M.Sc. (Advanced Sustainable Design), The University of Edinburgh","M.Sc. (Advanced Sustainable Design) มหาวิทยาลัยเอดินบะระ"],
+       ["Ph.D. (Architecture), Chulalongkorn University","ปริญญาเอก (สถาปัตยกรรม) จุฬาลงกรณ์มหาวิทยาลัย"]],
+  ri:[["Adaptable Buildings","อาคารที่ปรับเปลี่ยนได้"],
+      ["Healthcare and Laboratory Buildings Design","การออกแบบอาคารสถานพยาบาลและห้องปฏิบัติการ"],
+      ["Design for Safety","การออกแบบเพื่อความปลอดภัย"]],
+  em:"kawin.d@chula.ac.th", gs:null,
+  dp:"https://www.arch.chula.ac.th/archdb/index.php?view=info&idInstr=105&idDep=2",
   ws:["01","06"],
+  awards:[
+   ["2024","Faculty Recognition for Student Affairs — Chulalongkorn University","รางวัลยกย่องเชิดชูเกียรติอาจารย์ด้านกิจการนิสิต จุฬาฯ"],
+   ["2023","Outstanding Young Academic and Professional, Architecture — CDAST","รางวัลนักวิชาการและวิชาชีพดีเด่น รุ่นใหม่ สาขาสถาปัตยกรรม (สภาคณบดีฯ)"],
+   ["2022","Express Analysis Mobile Unit — National Research Council of Thailand","รถวิเคราะห์ผลด่วนพิเศษ สำนักงานการวิจัยแห่งชาติ (วช.)"]],
   pub:[
    {y:"2023",t:"Research Article",en:"Hospital design principles implementation: Reflections from practitioners in Thailand",v:"Asian Architecture and Building Engineering"},
-   {y:"2022",t:"Research Article",en:"The Design of Physical Components of Endoscopy Units: A Case Study of Four Major Public Hospitals in Thailand",v:"Nakhara: Journal of Environmental Design and Planning"},
+   {y:"2023",t:"Research Article",en:"Building Adaptations and Laboratory Safety Concerns: A Case Study of High-Rise Academic Laboratories in a Thai University",v:"Nakhara: Journal of Environmental Design and Planning, 22(2)"},
    {y:"2022",t:"Research Article",en:"Characteristics of Laboratory Safety Problems in Academic Laboratory Facilities in a Thai University",v:"ACS Chemical Health & Safety, 29(2)"},
+   {y:"2022",t:"Research Article",en:"The Design of Physical Components of Endoscopy Units: A Case Study of Four Major Public Hospitals in Thailand",v:"Nakhara: Journal of Environmental Design and Planning, 21(1)"},
    {y:"2020",t:"Creative work",en:"รถความดันบวก (Positive Pressure Mobile Unit)",v:"ผลงานสร้างสรรค์ · COVID-19"},
    {y:"2020",t:"Creative work",en:"รถวิเคราะห์ผลด่วนพิเศษ (Express Analysis Mobile Unit)",v:"ผลงานสร้างสรรค์ · COVID-19"},
    {y:"2019",t:"Book",en:"แนวทางการออกแบบหน่วยส่องกล้องทางเดินอาหารสำหรับประเทศไทย",v:"สำนักพิมพ์ เนเบอร์ มีเดีย"},
    {y:"2019",t:"Research Project",en:"การศึกษาสำรวจหน่วยส่องกล้องของโรงพยาบาลรัฐบาลในเขตกรุงเทพมหานคร",v:"คณะสถาปัตยกรรมศาสตร์ จุฬาฯ และสมาคมแพทย์ส่องกล้องทางเดินอาหารแห่งประเทศไทย"},
-   {y:"2018–20",t:"Research Project",en:"โครงการบริหารความเสี่ยงด้านความปลอดภัยและตรวจสอบอาคารแบบบูรณาการ (ประจำปี 2561, 2562, 2563)",v:"สำนักบริหารระบบกายภาพ จุฬาฯ",rp:"p18"},
+   {y:"2018–20",t:"Research Project",en:"โครงการบริหารความเสี่ยงด้านความปลอดภัยและตรวจสอบอาคารแบบบูรณาการ (2561–2563)",v:"สำนักบริหารระบบกายภาพ จุฬาฯ",rp:"p18"},
    {y:"2018–20",t:"Research Project",en:"การสำรวจประเมินองค์ประกอบด้านลักษณะทางกายภาพที่เกี่ยวข้องกับระบบจัดการความปลอดภัย — 12 อาคาร (MED, ENG, SCI, DEN, PHA, CEN)",v:"ศูนย์ความปลอดภัย อาชีวอนามัยและสิ่งแวดล้อม (ศปอส) จุฬาฯ",rp:"p18"},
   ]},
  {id:"pr",
@@ -978,12 +991,14 @@ PE.push(
 
 PE.push(
  {id:"np",
-  en:"Noramon Panjapiyakul", th:null,
-  role:["Lecturer","อาจารย์"], unit:null, img:"NORAMON", grp:null,
-  edu:[], ri:[], em:null, gs:null, dp:null, ws:[],
-  needname:1,
-  prov:["Name and role supplied by the group. Thai name, education, portrait and contact still needed.",
-        "ชื่อและตำแหน่งจากหน่วยงาน ยังต้องการชื่อภาษาไทย ประวัติการศึกษา ภาพถ่าย และช่องทางติดต่อ"],
+  en:"Noramon Panjapiyakul", th:"นรมน ปัญจปิยะกุล",
+  role:["Lecturer","อาจารย์"], unit:null,
+  img:"https://www.arch.chula.ac.th/arch-cu/images/facultypost/%E0%B8%AD.%E0%B8%99%E0%B8%A3%E0%B8%A1%E0%B8%99_%E0%B8%A5%E0%B8%9A%E0%B9%82%E0%B8%A5%E0%B9%82%E0%B8%81%E0%B9%89%E0%B9%81%E0%B8%A5%E0%B9%89%E0%B8%A7_1.png",
+  grp:null, edu:[], ri:[], em:"noramon.p@chula.ac.th", gs:null,
+  dp:"https://www.arch.chula.ac.th/arch-cu/TH/faculty/noramon_panjapiyakul.html", dpLabel:["Faculty profile","โปรไฟล์คณะ"],
+  ws:[],
+  prov:["Name, Thai name, role, email and portrait from the Faculty staff page. Education and publications still needed.",
+        "ชื่อ ชื่อภาษาไทย ตำแหน่ง อีเมล และภาพถ่ายจากหน้าบุคลากรของคณะ ยังต้องการประวัติการศึกษาและผลงาน"],
   pub:[]},
  {id:"sj",
   en:"Sira Jarupairoj", th:"สิระ จารุไพโรจน์",
@@ -1058,6 +1073,7 @@ const S = {
  grpV:["Architectural Management","การจัดการสถาปัตยกรรม"],
  wsIn:["Workstreams","สายงานที่รับผิดชอบ"],
  pubs:["Publications","ผลงานตีพิมพ์"],
+ awardsK:["Awards & honours","รางวัลและเกียรติยศ"],
  dept:["Department profile","โปรไฟล์ที่ภาควิชา"],
  coaT:["Also named on AMRG publications","ผู้ร่วมงานที่ปรากฏในผลงานของ AMRG"],
  strT:["Research streams","สายงานวิจัย"],
@@ -1139,13 +1155,17 @@ const SIB = [
  {t:"dep",en:"Do Visual Lab",th:"Do Visual Lab",u:"http://www.dvl.arch.chula.ac.th/"},
 ];
 const ROLE_RANK = [
-  ["Professor"], ["Assistant Professor","Associate Professor"],
+  ["Professor"], ["Associate Professor"], ["Assistant Professor"],
   ["Special Lecturer","Adjunct"], ["Lecturer"],
   ["Researcher"], ["Research Assistant"], ["Administrator"]
 ];
 function roleRank(p){
   const r = (p.role && p.role[0]) ? p.role[0] : "";
   if(!r) return 90;                                  // unknown roles sink to the end...
+  // check longer titles first so "Assistant Professor" doesn't match "Professor"
+  if(/Associate Professor/.test(r)) return 1;
+  if(/Assistant Professor/.test(r)) return 2;
+  if(/^Professor|\bProfessor$/.test(r)) return 0;
   for(let n=0;n<ROLE_RANK.length;n++)
     if(ROLE_RANK[n].some(k=>r.indexOf(k)!==-1)) return n;
   return 89;
@@ -1515,6 +1535,7 @@ function personPage(id){
       '<h2'+((lang==="th"&&p.th)?' lang="th"':'')+'>'+esc(nm)+'</h2>'+
       (alt?'<div class="pc-alt" lang="'+(en?"th":"en")+'">'+esc(alt)+'</div>'
           :'<div class="pc-alt need"'+thattr()+'>'+S.needName[i()]+'</div>')+
+      (p.note?'<div class="pc-note"'+thattr()+'>'+esc(p.note[i()])+'</div>':'')+
       (p.unknown?'<div class="gapn"'+thattr()+'>'+S.noProfN[i()]+'</div>':'')+
       (p.prov?'<div class="provn"'+thattr()+'>'+p.prov[i()]+'</div>':'')+
       (p.unit?'<div class="pb"><span class="bk">'+S.unitK[i()]+'</span><span class="bv"'+thattr()+'><b class="unit">'+esc(p.unit[i()])+'</b></span></div>':'')+
@@ -1529,6 +1550,9 @@ function personPage(id){
       (C.some(c=>(c.tt||[]).includes(p.id))?'<div class="pb"><span class="bk">'+S.teaches[i()]+'</span><span class="bv"><span class="wtags">'+
         C.filter(c=>(c.tt||[]).includes(p.id)).map(c=>'<a class="wt" href="#" onclick="go(\'courses\');return false;">'+c.c+'</a>').join("")+
         '</span></span></div>':'')+
+      (p.awards&&p.awards.length?'<div class="pb"><span class="bk">'+S.awardsK[i()]+'</span><span class="bv"><div class="awl">'+
+        p.awards.map(a=>'<div class="awi"><span class="awy">'+a[0]+'</span><span class="awt"'+(/[\u0E00-\u0E7F]/.test(a[1+i()])?' lang="th"':'')+'>'+esc(a[1+i()])+'</span></div>').join("")+
+        '</div></span></div>':'')+
       '<div class="pb"><span class="bk">'+S.pubs[i()]+' <span class="pn">'+p.pub.length+'</span></span><span class="bv">'+
         (p.pub.length?'<div class="pl">'+p.pub.map(b=>
           '<div class="pli"><span class="py">'+b.y+'</span>'+
