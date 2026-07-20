@@ -1043,10 +1043,10 @@ const S = {
  about:["About this project","เกี่ยวกับโครงการนี้"],
  partOf:["Part of","หน่วยงานต้นสังกัด"],
  affT:["Where AMRG sits","AMRG อยู่ตรงไหน"],
- affS:["AMRG is a research group within the Department of Architecture. Its work is carried out under the Faculty and the University, and its courses are the Department's courses.",
-       "AMRG เป็นหน่วยวิจัยภายใต้ภาควิชาสถาปัตยกรรมศาสตร์ ดำเนินงานภายใต้คณะและมหาวิทยาลัย และรายวิชาที่สอนคือรายวิชาของภาควิชา"],
+ affS:["AMRG is a research group within the Department of Architecture. Its activities are conducted under the auspices of the Faculty and the University, and the courses it delivers are those of the Department.",
+       "AMRG เป็นหน่วยวิจัยในสังกัดภาควิชาสถาปัตยกรรมศาสตร์ ดำเนินงานภายใต้คณะและมหาวิทยาลัย โดยรายวิชาที่รับผิดชอบเป็นรายวิชาของภาควิชา"],
  sibT:["Alongside us","หน่วยงานวิจัยอื่นในคณะและภาควิชา"],
- sibS:["Other research centres and units in the Faculty of Architecture and the Department.",
+ sibS:["Other research centres and units within the Faculty of Architecture and the Department.",
        "ศูนย์และหน่วยวิจัยอื่นในคณะสถาปัตยกรรมศาสตร์และภาควิชา"],
  sibK:{coe:["Faculty · Center of Excellence","คณะ · ศูนย์เชี่ยวชาญเฉพาะทาง"],
        ru:["Faculty · Research Unit","คณะ · หน่วยวิจัย"],
@@ -1545,22 +1545,22 @@ function aboutPage(){
   let h=head("about","");
   h+='<div class="ab">'+
    '<p class="lead"'+thattr()+'>'+(en
-     ? "AMRG grew out of the Architectural Laws & Regulations Research Unit, founded in 2002 within the Faculty of Architecture. It began as a response to public-safety failures in the built environment — the Royal Plaza Hotel collapse, the Kader factory fire — and set out to be a centre for the study of the laws that govern architecture. Two decades on, that remit has widened from law to the whole management of architecture: hospitals, professional practice, building safety, prefabrication."
-     : "AMRG เติบโตมาจากหน่วยวิจัยกฎหมายอาคารและสิ่งแวดล้อม ซึ่งก่อตั้งเมื่อ พ.ศ. 2545 ในคณะสถาปัตยกรรมศาสตร์ จุดเริ่มต้นมาจากเหตุการณ์ที่กระทบต่อความปลอดภัยของประชาชนในงานอาคาร — โรงแรมรอยัลพลาซ่าถล่ม ไฟไหม้โรงงานเคเดอร์ — และมุ่งเป็นศูนย์ศึกษากฎหมายที่กำกับงานสถาปัตยกรรม สองทศวรรษต่อมา ขอบเขตงานได้ขยายจากกฎหมายสู่การจัดการงานสถาปัตยกรรมทั้งหมด ทั้งโรงพยาบาล การปฏิบัติวิชาชีพ ความปลอดภัยอาคาร และการก่อสร้างด้วยชิ้นส่วนสำเร็จรูป")+'</p>'+
+     ? "The Architectural Management Research Group developed from the Architectural Laws and Regulations Research Unit, established in 2002 within the Faculty of Architecture, Chulalongkorn University. The Unit was founded to serve as a centre for the study of the legislation governing architectural practice and the built environment. Over the subsequent two decades its scope has broadened from architectural law to the management of architecture more generally, encompassing healthcare facilities, professional practice, building safety, and industrialised construction."
+     : "หน่วยวิจัยการจัดการงานสถาปัตยกรรมพัฒนามาจากหน่วยวิจัยกฎหมายอาคารและสิ่งแวดล้อม ซึ่งจัดตั้งขึ้นเมื่อ พ.ศ. 2545 ในคณะสถาปัตยกรรมศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย โดยมีวัตถุประสงค์เพื่อเป็นศูนย์ศึกษากฎหมายที่เกี่ยวข้องกับการประกอบวิชาชีพสถาปัตยกรรมและสภาพแวดล้อมสรรค์สร้าง ในช่วงสองทศวรรษต่อมา ขอบเขตการดำเนินงานได้ขยายจากกฎหมายสถาปัตยกรรมสู่การจัดการงานสถาปัตยกรรมในภาพรวม ครอบคลุมสถานพยาบาล การปฏิบัติวิชาชีพ ความปลอดภัยของอาคาร และการก่อสร้างด้วยระบบอุตสาหกรรม")+'</p>'+
    '<div class="tl">'+[
-     ["2545","2002",en?"Architectural Laws & Regulations Research Unit founded, led by Traiwat Viryasiri — the origin of the group.":"ก่อตั้งหน่วยวิจัยกฎหมายอาคารและสิ่งแวดล้อม นำโดย ไตรวัฒน์ วิรยศิริ — จุดกำเนิดของหน่วย"],
-     ["2547","2004",en?"ASA-funded research on architect professional fees. First MOUs with the profession's bodies.":"งานวิจัยเกณฑ์ค่าบริการวิชาชีพสถาปนิก ทุนสมาคมสถาปนิกสยามฯ และบันทึกความเข้าใจฉบับแรกกับองค์กรวิชาชีพ"],
-     ["2549","2006",en?"Building Inspector training programme launched with the Faculty of Engineering, at the Department of Public Works' request. Cooperation agreements with the Architect Council, ASA, and Public Works.":"เปิดโครงการฝึกอบรมผู้ตรวจสอบอาคารร่วมกับคณะวิศวกรรมศาสตร์ ตามคำขอของกรมโยธาธิการฯ และข้อตกลงความร่วมมือกับสภาสถาปนิก สมาคมสถาปนิกสยามฯ และกรมโยธาธิการฯ"],
-     ["2550","2007",en?"Recognised by the university's Ratchadaphiseksomphot Endowment Fund, on the path toward a Center of Excellence.":"ได้รับการสนับสนุนจากกองทุนรัชดาภิเษกสมโภช มหาวิทยาลัย บนเส้นทางสู่ศูนย์เชี่ยวชาญเฉพาะทาง"],
-     ["2556","2013",en?"Master plan, King Chulalongkorn Memorial Hospital — the hospital work at its fullest.":"ผังแม่บทโรงพยาบาลจุฬาลงกรณ์ — งานโรงพยาบาลในช่วงที่เข้มข้นที่สุด"],
-     ["2558","2015",en?"Architectural Management published. The remit is now wider than health.":"หนังสือ การจัดการสถาปัตยกรรม ตีพิมพ์ ขอบเขตงานกว้างกว่าด้านสุขภาพแล้ว"],
-     ["2561","2018",en?"Senior Research Scholar grant in healthcare architecture.":"ทุนเมธีวิจัยอาวุโส ด้านสถาปัตยกรรมสถานพยาบาล"],
-     ["2566","2023",en?"Revision of the Bangkok building ordinance. Law, ethics and fees become a research stream of their own.":"โครงการแก้ไขข้อบัญญัติกรุงเทพมหานคร กฎหมาย จรรยาบรรณ และค่าบริการวิชาชีพ กลายเป็นสายงานวิจัยของตัวเอง"],
-     ["2568","2025",en?"Prisons, airports, temples, stadiums, cost data. AMRG.":"เรือนจำ ท่าอากาศยาน วัด สนามกีฬา ข้อมูลราคา — AMRG"],
+     ["2545","2002",en?"The Architectural Laws and Regulations Research Unit is established under the direction of Traiwat Viryasiri.":"จัดตั้งหน่วยวิจัยกฎหมายอาคารและสิ่งแวดล้อม โดยมี ไตรวัฒน์ วิรยศิริ เป็นหัวหน้าหน่วย"],
+     ["2547","2004",en?"Research on architects' professional-fee criteria is undertaken with support from the Association of Siamese Architects; initial memoranda of understanding are concluded with professional bodies.":"ดำเนินงานวิจัยเกณฑ์ค่าบริการวิชาชีพสถาปนิก โดยการสนับสนุนของสมาคมสถาปนิกสยามฯ และจัดทำบันทึกความเข้าใจฉบับแรกกับองค์กรวิชาชีพ"],
+     ["2549","2006",en?"The Building Inspector training programme is inaugurated jointly with the Faculty of Engineering at the request of the Department of Public Works and Town & Country Planning. Cooperation agreements are established with the Architect Council of Thailand, the Association of Siamese Architects, and the Department.":"เปิดโครงการฝึกอบรมผู้ตรวจสอบอาคารร่วมกับคณะวิศวกรรมศาสตร์ ตามการประสานงานของกรมโยธาธิการและผังเมือง และจัดทำข้อตกลงความร่วมมือกับสภาสถาปนิก สมาคมสถาปนิกสยามฯ และกรมโยธาธิการและผังเมือง"],
+     ["2550","2007",en?"The Unit receives support from the University's Ratchadaphiseksomphot Endowment Fund toward development as a Center of Excellence.":"ได้รับการสนับสนุนจากกองทุนรัชดาภิเษกสมโภช มหาวิทยาลัย เพื่อพัฒนาสู่การเป็นศูนย์เชี่ยวชาญเฉพาะทาง"],
+     ["2556","2013",en?"The master plan for King Chulalongkorn Memorial Hospital marks the most substantial phase of the Group's healthcare work.":"จัดทำผังแม่บทโรงพยาบาลจุฬาลงกรณ์ ซึ่งเป็นงานด้านสถานพยาบาลที่มีความสำคัญที่สุดของหน่วย"],
+     ["2558","2015",en?"Publication of Architectural Management consolidates a remit extending beyond healthcare.":"ตีพิมพ์หนังสือ การจัดการสถาปัตยกรรม อันสะท้อนขอบเขตงานที่กว้างกว่าด้านสถานพยาบาล"],
+     ["2561","2018",en?"A Senior Research Scholar grant is awarded in the field of healthcare architecture.":"ได้รับทุนเมธีวิจัยอาวุโส ด้านสถาปัตยกรรมสถานพยาบาล"],
+     ["2566","2023",en?"The revision of the Bangkok Metropolitan building ordinance establishes law, professional ethics, and fees as a distinct research stream.":"ดำเนินโครงการแก้ไขข้อบัญญัติกรุงเทพมหานคร ทำให้กฎหมาย จรรยาบรรณ และค่าบริการวิชาชีพ เป็นสายงานวิจัยเฉพาะด้าน"],
+     ["2568","2025",en?"Current work extends to correctional facilities, airports, temples, sports venues, and construction cost data, under the name AMRG.":"งานปัจจุบันครอบคลุมเรือนจำ ท่าอากาศยาน ศาสนสถาน อาคารกีฬา และข้อมูลราคาค่าก่อสร้าง ภายใต้ชื่อ AMRG"],
    ].map(r=>'<div class="tr"><span class="ty">'+(en?r[1]:r[0])+'</span><span class="tt"'+thattr()+'>'+r[2]+'</span></div>').join("")+'</div>'+
    '<p class="note"'+thattr()+'>'+(en
-     ? "The Architectural Laws & Regulations Research Unit still operates under its own name — it teaches course 2501638 and keeps its website at archlaw-ru.com. AMRG is the wider group that grew around it."
-     : "หน่วยวิจัยกฎหมายอาคารและสิ่งแวดล้อมยังคงดำเนินงานภายใต้ชื่อของตนเอง เป็นผู้สอนรายวิชา 2501638 และมีเว็บไซต์ที่ archlaw-ru.com ส่วน AMRG คือหน่วยที่กว้างขึ้นซึ่งเติบโตขึ้นรอบๆ หน่วยนี้")+'</p>';
+     ? "The Architectural Laws and Regulations Research Unit continues to operate under its own name, delivering course 2501638 and maintaining its website at archlaw-ru.com. AMRG constitutes the broader group that has developed around it."
+     : "หน่วยวิจัยกฎหมายอาคารและสิ่งแวดล้อมยังคงดำเนินงานภายใต้ชื่อของตนเอง เป็นผู้รับผิดชอบรายวิชา 2501638 และดูแลเว็บไซต์ archlaw-ru.com โดย AMRG คือหน่วยงานในภาพรวมที่พัฒนาขึ้นจากหน่วยวิจัยดังกล่าว")+'</p>';
 
   h+='<h2 class="ah"'+thattr()+'>'+S.affT[i()]+'</h2><p class="ap"'+thattr()+'>'+S.affS[i()]+'</p>'+
      '<div class="lad">'+CH.map((c,n)=>
