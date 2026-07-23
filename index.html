@@ -1115,15 +1115,15 @@ const S = {
 };
 const T = {
  home:{
-  h:["The management of architecture — studied, taught, and practised.","การจัดการงานสถาปัตยกรรม — วิจัย สอน และปฏิบัติ ในเรื่องเดียวกัน"],
+  h:["The management of professional practice throughout the building lifecycle.","การจัดการการปฏิบัติวิชาชีพสถาปัตยกรรมตลอดวงจรชีวิตอาคาร"],
   s:["Architectural Management Research Group · Faculty of Architecture, Chulalongkorn University","หน่วยวิจัยการจัดการงานสถาปัตยกรรม · คณะสถาปัตยกรรมศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย"],
-  evT:["One subject, three registers","หนึ่งเรื่อง สามบทบาท"],
-  evS:["Most research groups claim the link between research, teaching and practice. Here is ours, in one row.","หน่วยวิจัยส่วนใหญ่กล่าวอ้างความเชื่อมโยงระหว่างงานวิจัย การสอน และการปฏิบัติ นี่คือของเรา ในแถวเดียว"],
-  ev:[["We study it","เราศึกษา"],["We teach it","เราสอน"],["We practise it","เรานำไปใช้"]],
-  resT:["Take something with you","นำบางอย่างกลับไปใช้"],
-  resS:["Free to download and cite. Written for the people who procure, price, permit and inspect buildings — not only for other researchers.","ดาวน์โหลดและอ้างอิงได้ฟรี จัดทำเพื่อผู้ที่ต้องจัดจ้าง ประมาณราคา ขออนุญาต และตรวจสอบอาคาร ไม่ใช่เพื่อนักวิจัยเท่านั้น"],
-  netT:["Twenty years of agreements","ความร่วมมือกว่ายี่สิบปี"],
-  netS:["The first memorandum was signed in 2547. MOUs with both the profession's regulator and its association.","บันทึกความเข้าใจฉบับแรกลงนามเมื่อ พ.ศ. 2547 มีความร่วมมือทั้งกับสภาวิชาชีพและสมาคมวิชาชีพ"],
+  evT:["A single discipline across three domains","สาขาวิชาเดียว ครอบคลุมสามบทบาท"],
+  evS:["The Group maintains an integrated relationship between research, teaching, and professional practice, as set out below.","หน่วยวิจัยดำเนินงานโดยเชื่อมโยงการวิจัย การเรียนการสอน และการปฏิบัติวิชาชีพเข้าด้วยกันอย่างเป็นระบบ ดังปรากฏต่อไปนี้"],
+  ev:[["Research","การวิจัย"],["Teaching","การเรียนการสอน"],["Practice","การปฏิบัติวิชาชีพ"]],
+  resT:["Resources for practice","ทรัพยากรสำหรับการปฏิบัติงาน"],
+  resS:["Materials available for download and citation, prepared for those responsible for the procurement, costing, permitting, and inspection of buildings, in addition to the research community.","เอกสารสำหรับดาวน์โหลดและอ้างอิง จัดทำขึ้นสำหรับผู้ที่มีหน้าที่จัดจ้าง ประมาณราคา ขออนุญาต และตรวจสอบอาคาร ตลอดจนแวดวงวิชาการ"],
+  netT:["Two decades of collaboration","ความร่วมมือกว่าสองทศวรรษ"],
+  netS:["The first memorandum of understanding was concluded in 2004. The Group maintains agreements with both the professional regulator and the professional association.","บันทึกความเข้าใจฉบับแรกจัดทำขึ้นเมื่อ พ.ศ. 2547 หน่วยวิจัยมีความร่วมมืออย่างเป็นทางการทั้งกับสภาวิชาชีพและสมาคมวิชาชีพ"],
   all:["See all","ดูทั้งหมด"],
  },
  project:{h:["Project","โครงการ"],s:["Everything the group has done — research that began with a question, and commissioned practice. One project can be both.","ทุกงานที่หน่วยดำเนินการ — ทั้งงานวิจัยที่ตั้งต้นจากคำถาม และงานปฏิบัติที่ได้รับมอบหมาย โครงการหนึ่งอาจเป็นได้ทั้งสองอย่าง"]},
@@ -1627,7 +1627,7 @@ function homePage(){
       .concat([{y:"2547",t:en?"MOU · Architect Council of Thailand & ASA":"MOU · สภาสถาปนิก และสมาคมสถาปนิกสยามฯ",go:"go('collaboration')"}])},
   ];
   h+='<section class="ev"><div class="ev-h"><h2>'+t.evT[i()]+'</h2><span class="sj"'+thattr()+'>'+
-     (en?"Building law":"กฎหมายอาคาร")+'</span><span class="nt"'+thattr()+'>'+t.evS[i()]+'</span></div><div class="ev-g">'+
+     (en?"A registered research unit of the Faculty":"หน่วยวิจัยที่จัดตั้งอย่างเป็นทางการของคณะ")+'</span><span class="nt"'+thattr()+'>'+t.evS[i()]+'</span></div><div class="ev-g">'+
      ev.map((c,n)=>'<div class="reg"><div class="rk">0'+(n+1)+'</div><div class="rt"'+thattr()+'>'+c.k[i()]+
        '<span class="alt" lang="'+(en?"th":"en")+'">'+c.k[1-i()]+'</span></div><ul>'+
        c.items.map(x=>'<li><a href="#" onclick="'+x.go+';return false;">'+(x.y?'<span class="y">'+x.y+'</span>':'')+
