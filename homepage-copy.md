@@ -16,8 +16,8 @@
 ## 1 · Hero — unit statement
 
 **`home.h`** — main headline
-- **EN:** Architectural management across the building lifecycle
-- **TH:** การจัดการงานสถาปัตยกรรมตลอดอายุอาคาร
+- **EN:** Advancing Architectural Management and Professional Practice Across the Building Lifecycle
+- **TH:** ขับเคลื่อนการจัดการสถาปัตยกรรมและการปฏิบัติวิชาชีพตลอดวงจรชีวิตอาคาร
 
 **`home.s`** — affiliation line
 - **EN:** Architectural Management Research Group · Faculty of Architecture, Chulalongkorn University
@@ -89,14 +89,15 @@
 
 | key | EN | TH |
 |---|---|---|
-| home.h | Architectural management across the building lifecycle | การจัดการงานสถาปัตยกรรมตลอดอายุอาคาร |
+| home.h | Advancing Architectural Management and Professional Practice Across the Building Lifecycle | ขับเคลื่อนการจัดการสถาปัตยกรรมและการปฏิบัติวิชาชีพตลอดวงจรชีวิตอาคาร |
+| home.desc | Connecting research, education and industry to advance built environment projects and assets from strategic planning, procurement and design through construction and delivery to operation, adaptation and renewal. | เชื่อมโยงงานวิจัย การศึกษา และภาคอุตสาหกรรม เพื่อยกระดับโครงการและสินทรัพย์ในสภาพแวดล้อมสรรค์สร้าง ตั้งแต่การวางแผนเชิงกลยุทธ์ การจัดหาและจัดจ้าง และการออกแบบ ผ่านกระบวนการก่อสร้างและการส่งมอบ ไปจนถึงการใช้งาน การปรับเปลี่ยน และการฟื้นฟู |
 | home.s | Architectural Management Research Group · Faculty of Architecture, Chulalongkorn University | หน่วยวิจัยการจัดการงานสถาปัตยกรรม · คณะสถาปัตยกรรมศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย |
 | home.subjectTag | A registered research unit of the Faculty | หน่วยวิจัยที่จัดตั้งอย่างเป็นทางการของคณะ |
 | home.evT | A single discipline across three domains | สาขาวิชาเดียว ครอบคลุมสามบทบาท |
 | home.evS | The Group maintains an integrated relationship between research, teaching, and professional practice, as set out below. | หน่วยวิจัยดำเนินงานโดยเชื่อมโยงการวิจัย การเรียนการสอน และการปฏิบัติวิชาชีพเข้าด้วยกันอย่างเป็นระบบ ดังปรากฏต่อไปนี้ |
-| home.ev[0] | Research | การวิจัย |
-| home.ev[1] | Teaching | การเรียนการสอน |
-| home.ev[2] | Practice | การปฏิบัติวิชาชีพ |
+| home.ev[0] | Research | งานวิจัย |
+| home.ev[1] | Course | รายวิชา |
+| home.ev[2] | Practice | งานบริการวิชาชีพ |
 | home.resT | Resources for practice | ทรัพยากรสำหรับการปฏิบัติงาน |
 | home.resS | Materials available for download and citation, prepared for those responsible for the procurement, costing, permitting, and inspection of buildings, in addition to the research community. | เอกสารสำหรับดาวน์โหลดและอ้างอิง จัดทำขึ้นสำหรับผู้ที่มีหน้าที่จัดจ้าง ประมาณราคา ขออนุญาต และตรวจสอบอาคาร ตลอดจนแวดวงวิชาการ |
 | home.netT | Two decades of collaboration | ความร่วมมือกว่าสองทศวรรษ |
