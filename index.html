@@ -1668,8 +1668,7 @@ function homePage(){
     {k:t.ev[2],go:"go('practice')",items:[R.find(r=>r.id==="x03"),R.find(r=>r.id==="x04")].map(r=>({y:"",t:en?r.en:r.th,go:"go('resources')"}))
       .concat([{y:"2547",t:en?"MOU · Architect Council of Thailand & ASA":"MOU · สภาสถาปนิก และสมาคมสถาปนิกสยามฯ",go:"go('collaboration')"}])},
   ];
-  h+='<section class="ev"><div class="ev-h"><h2>'+t.evT[i()]+'</h2><span class="sj"'+thattr()+'>'+
-     (en?"A registered research unit of the Faculty":"หน่วยวิจัยที่จัดตั้งอย่างเป็นทางการของคณะ")+'</span><span class="nt"'+thattr()+'>'+t.evS[i()]+'</span></div><div class="ev-g">'+
+  h+='<section class="ev"><div class="ev-h"><h2>'+t.evT[i()]+'</h2></div><div class="ev-g">'+
      ev.map((c,n)=>'<div class="reg"><div class="rk">0'+(n+1)+'</div><div class="rt"'+thattr()+'><a href="#" class="rl" onclick="'+c.go+';return false;">'+c.k[i()]+'</a>'+
        '<span class="alt" lang="'+(en?"th":"en")+'">'+c.k[1-i()]+'</span></div><ul>'+
        c.items.map(x=>'<li><a href="#" onclick="'+x.go+';return false;">'+(x.y?'<span class="y">'+x.y+'</span>':'')+
