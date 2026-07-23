@@ -44,6 +44,7 @@ button{font-family:inherit}
 .ph{position:relative;aspect-ratio:3/2;background:#ecebe6;display:flex;align-items:center;justify-content:center;
  padding:26px 14px 14px;border-bottom:1px solid var(--rule);overflow:hidden}
 .ph.tall{aspect-ratio:16/9}
+.fc-cov{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
 .ph-l{position:absolute;top:8px;left:10px;font-family:var(--mono);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--chula)}
 .ph-f{font-family:'IBM Plex Sans Thai',var(--mono);font-size:9.5px;line-height:1.65;color:#a4a29b;text-align:center;
  overflow:hidden;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical}
@@ -764,6 +765,7 @@ const E = [
  {yc:"2024",yb:"2567",en:"Lecture · Smart Sustainable City for Silver Gen",th:"บรรยาย Smart Sustainable City for Silver Gen",t:"lecture"},
  {yc:"2024",yb:"2567",en:"Lecture · hospital master planning, Ministry of Public Health",th:"บรรยาย ผังแม่บทโรงพยาบาล กระทรวงสาธารณสุข",t:"lecture"},
  {yc:"2021",yb:"2564",en:"Hospital design tutorial for postgraduate students",th:"ติวพิเศษการออกแบบโรงพยาบาลสำหรับนิสิตปริญญาโท",t:"tutorial"},
+ {yc:"2019",yb:"2562",en:"Academic panel · The future of healthcare architecture",th:"สนทนาทางวิชาการ : มองอนาคตสถาปัตยกรรมสถานพยาบาล",t:"lecture"},
  {yc:"2019",yb:"2562",en:"HARU Lecture Series",th:"อบรม HARU Lecture Series",t:"training"},
  {yc:"2018",yb:"2561",en:"Study visit · Bang Phli Hospital",th:"ศึกษาดูงานโรงพยาบาลบางพลี",t:"visit"},
 ];
@@ -1259,7 +1261,7 @@ function ph(fd,tall){ return '<span class="ph'+(tall?" tall":"")+'"><span class=
 function card(p,big){
   const mn=lang==="en"?p.en:p.th, al=lang==="en"?p.th:p.en;
   return '<a class="fc'+(big?" big":"")+'" href="#/p/'+p.id+'" onclick="go(\'p\',\''+p.id+'\');return false;">'+
-    ph(p.fd,big)+
+    (PIMG[p.id]?'<img class="fc-cov" src="data:image/jpeg;base64,'+PIMG[p.id]+'" alt="'+esc(mn)+'" loading="lazy">':ph(p.fd,big))+
     '<span class="fc-b"><span class="ws">'+L("ws",p.ws)+'</span>'+
     '<span class="t"'+thattr()+'>'+esc(mn)+(p.star?'<span class="s8">★</span>':'')+
       '<span class="alt" lang="'+(lang==="en"?"th":"en")+'">'+esc(al)+'</span></span>'+
@@ -1389,6 +1391,14 @@ function coursesPage(){
         '</span></div>';
     }).join("");
   });
+  const tr=E.filter(e=>e.t==="training");
+  if(tr.length){
+    h+='<div class="grp"><h2'+thattr()+'>'+(en?"Training":"การอบรม")+'</h2><span class="gn">'+tr.length+'</span></div>';
+    h+=tr.map(e=>'<div class="crow"><span class="cc">'+(en?e.yc:e.yb)+'</span>'+
+      '<span class="ti"'+thattr()+'>'+esc(en?e.en:e.th)+
+        '<span class="alt" lang="'+(en?"th":"en")+'">'+esc(en?e.th:e.en)+'</span></span>'+
+      '<span class="cl"></span></div>').join("");
+  }
   return h;
 }
 function resourcesPage(){
@@ -1511,7 +1521,7 @@ function contactPage(){
 
 function newsPage(){
   let h=head("news");
-  h+=E.map(e=>'<div class="erow"><span class="ek">'+ET[e.t][i()]+'</span>'+
+  h+=E.filter(e=>e.t!=="training").map(e=>'<div class="erow"><span class="ek">'+ET[e.t][i()]+'</span>'+
     '<span class="ti"'+thattr()+'>'+esc(lang==="en"?e.en:e.th)+
       '<span class="alt" lang="'+(lang==="en"?"th":"en")+'">'+esc(lang==="en"?e.th:e.en)+'</span></span>'+
     '<span class="yr">'+(lang==="en"?e.yc:e.yb)+'</span></div>').join("");
