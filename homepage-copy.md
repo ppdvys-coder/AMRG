@@ -16,8 +16,8 @@
 ## 1 · Hero — unit statement
 
 **`home.h`** — main headline
-- **EN:** The management of professional practice throughout the building lifecycle.
-- **TH:** การจัดการการปฏิบัติวิชาชีพสถาปัตยกรรมตลอดวงจรชีวิตอาคาร
+- **EN:** Architectural management across the building lifecycle
+- **TH:** การจัดการงานสถาปัตยกรรมตลอดอายุอาคาร
 
 **`home.s`** — affiliation line
 - **EN:** Architectural Management Research Group · Faculty of Architecture, Chulalongkorn University
@@ -89,7 +89,7 @@
 
 | key | EN | TH |
 |---|---|---|
-| home.h | The management of professional practice throughout the building lifecycle. | การจัดการการปฏิบัติวิชาชีพสถาปัตยกรรมตลอดวงจรชีวิตอาคาร |
+| home.h | Architectural management across the building lifecycle | การจัดการงานสถาปัตยกรรมตลอดอายุอาคาร |
 | home.s | Architectural Management Research Group · Faculty of Architecture, Chulalongkorn University | หน่วยวิจัยการจัดการงานสถาปัตยกรรม · คณะสถาปัตยกรรมศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย |
 | home.subjectTag | A registered research unit of the Faculty | หน่วยวิจัยที่จัดตั้งอย่างเป็นทางการของคณะ |
 | home.evT | A single discipline across three domains | สาขาวิชาเดียว ครอบคลุมสามบทบาท |
