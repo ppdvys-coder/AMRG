@@ -114,11 +114,13 @@ a:hover .ph{background:#e6e4de}
 
 /* hero */
 .hero{border-bottom:1px solid var(--ink);padding:clamp(44px,8vw,110px) var(--pad) clamp(32px,5vw,64px)}
-.hero h1{font-weight:600;font-size:clamp(28px,3.4vw,44px);line-height:1.1;letter-spacing:-0.03em;max-width:32ch}
+.hero h1{font-weight:600;font-size:clamp(28px,3.4vw,44px);line-height:1.1;letter-spacing:-0.03em;max-width:46ch}
 .hero h1[lang="th"]{font-size:clamp(22px,2.6vw,30px);line-height:1.35;letter-spacing:0;max-width:none}
 .hero .hs{margin-top:14px;font-size:clamp(15px,1.9vw,21px);color:var(--grey);max-width:34ch;font-weight:300}
 .hs[lang="th"]{max-width:none}
-.hlead{margin-top:22px;font-size:clamp(15px,1.7vw,19px);line-height:1.6;color:#3c3c39;max-width:66ch;font-weight:300}
+.hlead{margin-top:22px;font-size:clamp(15px,1.7vw,19px);line-height:1.6;color:#3c3c39;max-width:104ch;font-weight:300}
+.rt a.rl{color:inherit;text-decoration:none;transition:color .15s}
+.rt a.rl:hover{color:var(--chula)}
 .hero .hm{margin-top:clamp(22px,3vw,34px);padding-top:16px;border-top:1px solid var(--rule-2);
  font-family:var(--mono);font-size:11px;color:var(--grey);letter-spacing:.04em}
 .hero .hm:lang(th){font-family:'IBM Plex Sans Thai',var(--sans);font-size:12.5px}
@@ -1633,14 +1635,14 @@ function homePage(){
 
   // evidence line
   const ev=[
-    {k:t.ev[0],items:[P.find(p=>p.id==="r09"),P.find(p=>p.id==="r12")].map(p=>({y:yr(p),t:en?p.en:p.th,go:"go('p','"+p.id+"')"}))},
-    {k:t.ev[1],items:[C.find(c=>c.c==="2501638")].map(c=>({y:c.c,t:en?c.en:c.th,go:"go('courses')"}))},
-    {k:t.ev[2],items:[R.find(r=>r.id==="x03"),R.find(r=>r.id==="x04")].map(r=>({y:"",t:en?r.en:r.th,go:"go('resources')"}))
+    {k:t.ev[0],go:"go('research')",items:[P.find(p=>p.id==="r09"),P.find(p=>p.id==="r12")].map(p=>({y:yr(p),t:en?p.en:p.th,go:"go('p','"+p.id+"')"}))},
+    {k:t.ev[1],go:"go('courses')",items:[C.find(c=>c.c==="2501638")].map(c=>({y:c.c,t:en?c.en:c.th,go:"go('courses')"}))},
+    {k:t.ev[2],go:"go('practice')",items:[R.find(r=>r.id==="x03"),R.find(r=>r.id==="x04")].map(r=>({y:"",t:en?r.en:r.th,go:"go('resources')"}))
       .concat([{y:"2547",t:en?"MOU · Architect Council of Thailand & ASA":"MOU · สภาสถาปนิก และสมาคมสถาปนิกสยามฯ",go:"go('collaboration')"}])},
   ];
   h+='<section class="ev"><div class="ev-h"><h2>'+t.evT[i()]+'</h2><span class="sj"'+thattr()+'>'+
      (en?"A registered research unit of the Faculty":"หน่วยวิจัยที่จัดตั้งอย่างเป็นทางการของคณะ")+'</span><span class="nt"'+thattr()+'>'+t.evS[i()]+'</span></div><div class="ev-g">'+
-     ev.map((c,n)=>'<div class="reg"><div class="rk">0'+(n+1)+'</div><div class="rt"'+thattr()+'>'+c.k[i()]+
+     ev.map((c,n)=>'<div class="reg"><div class="rk">0'+(n+1)+'</div><div class="rt"'+thattr()+'><a href="#" class="rl" onclick="'+c.go+';return false;">'+c.k[i()]+'</a>'+
        '<span class="alt" lang="'+(en?"th":"en")+'">'+c.k[1-i()]+'</span></div><ul>'+
        c.items.map(x=>'<li><a href="#" onclick="'+x.go+';return false;">'+(x.y?'<span class="y">'+x.y+'</span>':'')+
          '<span'+thattr()+'>'+esc(x.t)+'</span></a></li>').join("")+'</ul></div>').join("")+'</div></section>';
