@@ -786,7 +786,7 @@ const PE = [
   ws:["01","02","03","04","05"],
   pub:[
    {y:"2025",t:"Book Chapter",en:"Architectural design and modular construction",v:"Integrated Perspectives in Offsite Construction"},
-   {y:"2026",t:"Research Article",en:"Collaborative architecture, engineering, construction and operations (AECO) practice model for healthcare facilities in Thailand",v:"International Journal of Construction Management"},
+   {y:"2026",t:"Research Article",en:"Collaborative architecture, engineering, construction and operations (AECO) practice model for healthcare facilities in Thailand",v:"International Journal of Construction Management",url:"https://www.tandfonline.com/doi/abs/10.1080/15623599.2025.2546014"},
    {y:"2025",t:"Research Article",en:"Prescriptive-based building regulations: challenges and recommendations for modernization in the case of Bangkok",v:"Nakhara: Journal of Environmental Design and Planning"},
    {y:"2025",t:"Research Article",en:"The radiation oncology department: design guidelines, implementation challenges, and lessons learned in Thai public hospitals",v:"Nakhara: Journal of Environmental Design and Planning"},
    {y:"2023",t:"Research Article",en:"Hospital design principles implementation: Reflections from practitioners in Thailand",v:"Asian Architecture and Building Engineering"},
@@ -825,7 +825,7 @@ const PE = [
    ["2025","Outstanding Young Researcher, Social Sciences — Chulalongkorn University","รางวัลนักวิจัยรุ่นเยาว์ดีเด่น สาขาสังคมศาสตร์ จุฬาฯ"],
    ["2023","Most Cited Paper 2020, Architectural Engineering and Design Management (Scopus Q1)","บทความที่ถูกอ้างอิงสูงสุด ปี 2020 (Scopus Q1)"]],
   pub:[
-   {y:"2026",t:"Research Article",en:"Collaborative architecture, engineering, construction and operations (AECO) practice model for healthcare facilities in Thailand",v:"International Journal of Construction Management"},
+   {y:"2026",t:"Research Article",en:"Collaborative architecture, engineering, construction and operations (AECO) practice model for healthcare facilities in Thailand",v:"International Journal of Construction Management",url:"https://www.tandfonline.com/doi/abs/10.1080/15623599.2025.2546014"},
    {y:"2026",t:"Research Article",en:"Design for manufacture and assembly (DfMA) for modular buildings: an analytical framework",v:"Journal of Asian Architecture and Building Engineering"},
    {y:"2025",t:"Book",en:"Integrated Perspectives in Offsite Construction",v:"Taylor & Francis"},
    {y:"2025",t:"Book Chapter",en:"Robotics and artificial intelligence in defect detection: off-site construction and facility management",v:"Integrated Perspectives in Offsite Construction"},
@@ -874,7 +874,7 @@ PE.push(
   dp:"https://www.arch.arch.chula.ac.th/people/kullathida-sangnin/",
   ws:["01","04"],
   pub:[
-   {y:"2026",t:"Research Article",en:"Collaborative architecture, engineering, construction and operations (AECO) practice model for healthcare facilities in Thailand",v:"International Journal of Construction Management"},
+   {y:"2026",t:"Research Article",en:"Collaborative architecture, engineering, construction and operations (AECO) practice model for healthcare facilities in Thailand",v:"International Journal of Construction Management",url:"https://www.tandfonline.com/doi/abs/10.1080/15623599.2025.2546014"},
    {y:"2025",t:"Research Article",en:"The radiation oncology department: design guidelines, implementation challenges, and lessons learned in Thai public hospitals",v:"Nakhara: Journal of Environmental Design and Planning"},
    {y:"2023",t:"Research Article",en:"Hospital design principles implementation: Reflections from practitioners in Thailand",v:"Asian Architecture and Building Engineering"},
    {y:"2019",t:"Research Project",en:"การศึกษาความเป็นไปได้ในการก่อสร้างอาคารหลังใหม่ และข้อเสนอแนะในการจัดสรรพื้นที่ทำงานในอนาคต กระทรวงการต่างประเทศ",v:"กระทรวงการต่างประเทศ",rp:"r16"},
@@ -1037,7 +1037,7 @@ PE.push(
   prov:["Name, Thai name, role, email and portrait from the Faculty staff page. Education and publications still needed.",
         "ชื่อ ชื่อภาษาไทย ตำแหน่ง อีเมล และภาพถ่ายจากหน้าบุคลากรของคณะ ยังต้องการประวัติการศึกษาและผลงาน"],
   pub:[
-   {y:"2026",t:"Research Article",en:"Collaborative architecture, engineering, construction and operations (AECO) practice model for healthcare facilities in Thailand",v:"International Journal of Construction Management"},
+   {y:"2026",t:"Research Article",en:"Collaborative architecture, engineering, construction and operations (AECO) practice model for healthcare facilities in Thailand",v:"International Journal of Construction Management",url:"https://www.tandfonline.com/doi/abs/10.1080/15623599.2025.2546014"},
    {y:"2025",t:"Research Article",en:"The radiation oncology department: design guidelines, implementation challenges, and lessons learned in Thai public hospitals",v:"Nakhara: Journal of Environmental Design and Planning"}]},
  {id:"sj",
   en:"Sira Jarupairoj", th:"สิระ จารุไพโรจน์",
@@ -1410,8 +1410,9 @@ function derivedPubs(){
   PE.forEach(p => (p.pub||[]).forEach(b => {
     if (!ACAD_J.includes(b.t) && !ACAD_C.includes(b.t) && !ACAD_B.includes(b.t)) return;
     const k = b.en.trim().toLowerCase().replace(/\s+/g," ").replace(/[.,:;()]/g,"");
-    if (!map.has(k)) map.set(k, {y:b.y, t:b.t, en:b.en, v:b.v, rp:b.rp, who:[]});
+    if (!map.has(k)) map.set(k, {y:b.y, t:b.t, en:b.en, v:b.v, rp:b.rp, url:b.url, who:[]});
     const e = map.get(k);
+    if (b.url && !e.url) e.url = b.url;
     if (!e.who.some(w=>w.id===p.id)) e.who.push(p);
     if (ACAD_C.includes(b.t)) e.t = "Conference Proceedings";
     if (b.rp && !e.rp) e.rp = b.rp;
@@ -1446,7 +1447,8 @@ function pubsPage(){
         '<span class="ti"'+(thai?' lang="th"':'')+'>'+esc(b.en)+
           '<span class="pv2" lang="th">'+esc(b.v)+'</span>'+
           (link?'<a class="plink" href="#/p/'+b.rp+'" onclick="go(\'p\',\''+b.rp+'\');return false;">→ '+
-                (en?"project":"โครงการ")+'</a>':'')+'</span>'+
+                (en?"project":"โครงการ")+'</a>':'')+
+          (b.url?'<a class="plink" href="'+b.url+'" target="_blank" rel="noopener">'+(en?"source":"แหล่งที่มา")+' ↗</a>':'')+'</span>'+
         (b.who.length?'<span class="pw"><span class="pwk">'+S.amrgAu[i()]+'</span>'+
           b.who.map(w=>'<a class="pwn" href="#/person/'+w.id+'" onclick="go(\'person\',\''+w.id+'\');return false;"'+thattr()+'>'+
             esc(en?w.en:w.th)+'</a>').join("")+'</span>':'')+
