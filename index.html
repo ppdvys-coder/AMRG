@@ -1388,10 +1388,11 @@ function resourcesPage(){
 }
 const ACAD_J = ["Research Article","Academic Article"];
 const ACAD_C = ["Conference Proceedings"];
+const ACAD_B = ["Book","Book Chapter"];
 function derivedPubs(){
   const map = new Map();
   PE.forEach(p => (p.pub||[]).forEach(b => {
-    if (!ACAD_J.includes(b.t) && !ACAD_C.includes(b.t)) return;
+    if (!ACAD_J.includes(b.t) && !ACAD_C.includes(b.t) && !ACAD_B.includes(b.t)) return;
     const k = b.en.trim().toLowerCase().replace(/\s+/g," ").replace(/[.,:;()]/g,"");
     if (!map.has(k)) map.set(k, {y:b.y, t:b.t, en:b.en, v:b.v, rp:b.rp, who:[]});
     const e = map.get(k);
@@ -1408,7 +1409,8 @@ function pubsPage(){
   let h=head("publications");
   const dp = derivedPubs();
   const groups = [[S.jT[i()], dp.filter(x=>ACAD_J.includes(x.t))],
-                  [S.cT[i()], dp.filter(x=>ACAD_C.includes(x.t))]];
+                  [S.cT[i()], dp.filter(x=>ACAD_C.includes(x.t))],
+                  [(en?"Books & chapters":"หนังสือและบทในหนังสือ"), dp.filter(x=>ACAD_B.includes(x.t))]];
   h+='<div class="pnote"'+thattr()+'>'+S.pubNote[i()]+
      ' <a href="https://www.arch.chula.ac.th/archdb/" target="_blank" rel="noopener">'+S.archdb[i()]+'<span class="ex">↗</span></a></div>';
   groups.forEach(([t,list])=>{
