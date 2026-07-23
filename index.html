@@ -1340,26 +1340,15 @@ function coursesPage(){
       '<div class="cf-c">'+c.c+'</div>'+
       '<h2'+thattr()+'>'+esc(en?c.en:c.th)+'<span class="alt" lang="'+(en?"th":"en")+'">'+esc(en?c.th:c.en)+'</span></h2>'+
       '<p class="cf-d"'+thattr()+'>'+esc(c.desc[i()])+'</p>'+
-      '<div class="cf-w"'+thattr()+'>'+esc(c.when[i()])+'<span class="cf-n">'+esc(c.note[i()])+'</span></div>'+
+      '<div class="cf-w"'+thattr()+'>'+esc(c.when[i()])+'</div>'+
       '<div class="cf-r"><span class="k">'+S.taught[i()]+'</span>'+
         tt.map(w=>'<a href="#/person/'+w.id+'" onclick="go(\'person\',\''+w.id+'\');return false;"'+thattr()+'>'+esc(en?w.en:(w.th||w.en))+'</a>').join("")+'</div>'+
-      (rp.length?'<div class="cf-r"><span class="k">'+(en?"Comes from":"มาจาก")+'</span>'+
-        rp.map(x=>'<a href="#/p/'+x.id+'" onclick="go(\'p\',\''+x.id+'\');return false;"'+thattr()+'>'+esc(en?x.en:x.th)+'</a>').join("")+'</div>':'')+
-      (rs.length?'<div class="cf-r"><span class="k">'+(en?"Resources":"คลังข้อมูล")+'</span>'+
-        rs.map(x=>'<a href="#" onclick="go(\'resources\');return false;"'+thattr()+'>↓ '+esc(en?x.en:x.th)+'</a>').join("")+'</div>':'')+
       '</div></section>';
   });
-  h+='<div class="grp"><h2'+thattr()+'>'+S.actT[i()]+'</h2><span class="gn">'+E.length+'</span></div>';
-  h+=E.map(e=>'<div class="erow"><span class="ek">'+ET[e.t][i()]+'</span>'+
-    '<span class="ti"'+thattr()+'>'+esc(en?e.en:e.th)+
-      '<span class="alt" lang="'+(en?"th":"en")+'">'+esc(en?e.th:e.en)+'</span></span>'+
-    '<span class="yr">'+(en?e.yc:e.yb)+'</span></div>').join("");
   ["pg","ug","new"].forEach(lv=>{
     const cs=C.filter(c=>c.lv===lv); if(!cs.length) return;
     h+='<div class="grp"><h2>'+S.lv[lv][i()]+'</h2></div>';
     h+=cs.map(c=>{
-      const links=[...(c.rp||[]).map(x=>{const p=P.find(y=>y.id===x);return p?'<a class="lk" href="#/p/'+p.id+'" onclick="go(\'p\',\''+p.id+'\');return false;"'+thattr()+'>'+esc(lang==="en"?p.en:p.th)+'</a>':"";}),
-                  ...(c.rs||[]).map(x=>{const r=R.find(y=>y.id===x);return r?'<a class="lk res" href="#/resources" onclick="go(\'resources\');return false;"'+thattr()+'>'+esc(lang==="en"?r.en:r.th)+'</a>':"";})].filter(Boolean);
       const tt=(c.tt||[]).map(id=>PE.find(x=>x.id===id)).filter(Boolean);
       return '<div class="crow"><span class="cc">'+c.c+'</span>'+
         '<span class="ti"'+thattr()+'>'+esc(lang==="en"?c.en:c.th)+
@@ -1367,7 +1356,6 @@ function coursesPage(){
         '<span class="cl">'+
           (tt.length?'<span class="cl-k">'+S.taught[i()]+'</span><span class="tt">'+
             tt.map(w=>'<a class="ttn" href="#/person/'+w.id+'" onclick="go(\'person\',\''+w.id+'\');return false;"'+thattr()+'>'+esc(lang==="en"?w.en:(w.th||w.en))+'</a>').join("")+'</span>':'')+
-          (links.length?'<span class="cl-k">'+(lang==="en"?"Comes from":"มาจาก")+'</span>'+links.join(""):'')+
         '</span></div>';
     }).join("");
   });
