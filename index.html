@@ -1743,7 +1743,7 @@ function homePage(){
   // evidence line
   const ev=[
     {k:t.ev[0],go:"go('research')",items:[P.find(p=>p.id==="r09"),P.find(p=>p.id==="r12")].map(p=>({y:yr(p),t:en?p.en:p.th,go:"go('p','"+p.id+"')"}))},
-    {k:t.ev[1],go:"go('courses')",items:[C.find(c=>c.c==="2501638")].map(c=>({y:c.c,t:en?c.en:c.th,go:"go('courses')"}))},
+    {k:t.ev[1],go:"go('courses')",items:[C.find(c=>c.c==="2501638"),C.find(c=>c.c==="2501645"),C.find(c=>c.c==="2501606")].filter(Boolean).map(c=>({y:c.c,t:en?c.en:c.th,go:"go('courses')"}))},
     {k:t.ev[2],go:"go('practice')",items:[R.find(r=>r.id==="x03"),R.find(r=>r.id==="x04")].map(r=>({y:"",t:en?r.en:r.th,go:"go('resources')"}))
       .concat([{y:"2547",t:en?"MOU · Architect Council of Thailand & ASA":"MOU · สภาสถาปนิก และสมาคมสถาปนิกสยามฯ",go:"go('collaboration')"}])},
   ];
