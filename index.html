@@ -1738,13 +1738,6 @@ function homePage(){
      '<div class="fe-g">'+SEL.map(selCard).join("")+'</div></section>';
 
   // resources
-  h+='<section class="hr"><div class="hr-h"><h2'+thattr()+'>'+t.resT[i()]+'</h2>'+
-     '<p'+thattr()+'>'+t.resS[i()]+'</p></div><div class="hr-g">'+
-     Object.keys(RG).map(g=>{const rs=R.filter(r=>r.g===g);
-       return '<a class="hrc" href="#" onclick="go(\'resources\');return false;"><span class="t"'+thattr()+'>'+RG[g][i()]+'</span>'+
-       '<span class="l">'+rs.slice(0,4).map(r=>'<span'+thattr()+'>'+esc(en?r.en:r.th)+'</span>').join("")+'</span>'+
-       '<span class="d">'+S.dl[i()]+' ↓</span></a>';}).join("")+'</div></section>';
-
   // network
   h+='<section class="hn"><h2'+thattr()+'>'+t.netT[i()]+'</h2><p'+thattr()+'>'+t.netS[i()]+'</p>'+
      '<div class="nw">'+N.filter(n=>n.key).concat(N.filter(n=>!n.key).slice(0,8)).map(n=>
