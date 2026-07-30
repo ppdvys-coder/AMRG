@@ -957,9 +957,11 @@ PE.push(
   ]},
  {id:"pr",
   en:"Pakwan Roopkaew", th:"พาขวัญ รูปแก้ว",
-  role:[null,null], unit:null, img:"PAKWAN", grp:null,
-  edu:[], ri:[], em:null, gs:null, dp:null, ws:["01"],
-  unknown:1,
+  role:["PhD Candidate · Researcher","นักศึกษาปริญญาเอก · นักวิจัย"], unit:null, img:"PAKWAN", grp:null,
+  edu:[["Ph.D. in progress, University College London (UCL) \u2014 since February 2025","กำลังศึกษาปริญญาเอก University College London (UCL) \u2014 ตั้งแต่กุมภาพันธ์ 2568"],
+       ["M.Arch., Chulalongkorn University","สถ.ม. จุฬาลงกรณ์มหาวิทยาลัย"],
+       ["B.Arch., Chulalongkorn University","สถ.บ. จุฬาลงกรณ์มหาวิทยาลัย"]],
+  ri:[], em:null, gs:null, dp:null, ws:["01"],
   prov:["Sourced: name and publications, from the Department directory, which lists her as first author on both 2019 outpatient studies. Role, unit, portrait and contact are still needed.",
         "ที่มาของข้อมูล: ชื่อและผลงาน จากทำเนียบภาควิชา ซึ่งระบุว่าเป็นผู้เขียนชื่อแรกของบทความผู้ป่วยนอกทั้งสองฉบับ พ.ศ. 2562 ยังต้องการตำแหน่ง หน่วยงาน ภาพถ่าย และช่องทางติดต่อ"],
   pub:[
@@ -1391,7 +1393,7 @@ function tabHTML(list, active, route){
 function listPage(kind){
   const all=P.filter(p=>p.k.includes(kind));
   const m=sortP(all.filter(p=>pass(p)));
-  const fe=kind==="p"?["p11","r23","p02","p19"].map(id=>P.find(p=>p.id===id)).filter(Boolean):all.filter(p=>p.feat);
+  const fe=kind==="p"?["p11","r23","p02","p19"].map(id=>P.find(p=>p.id===id)).filter(Boolean):all.filter(p=>PIMG[p.id]);
   let h=head(kind==="r"?"research":"practice", "01 · "+T.project.h[i()]);
 
   if(fe.length) h+='<section class="fe"><div class="fe-h"><h2>'+S.feT[i()]+'</h2>'+
@@ -1461,7 +1463,7 @@ function coursesPage(){
   let h=head("courses");
   const fc=C.filter(c=>c.feat);
   fc.forEach(c=>{
-    const tt=(c.tt||[]).map(id=>PE.find(x=>x.id===id)).filter(Boolean);
+    const tt=(c.tt||["tv","vl"]).map(id=>PE.find(x=>x.id===id)).filter(Boolean);
     const rs=(c.rs||[]).map(id=>R.find(x=>x.id===id)).filter(Boolean);
     const rp=(c.rp||[]).map(id=>P.find(x=>x.id===id)).filter(Boolean);
     h+='<section class="cf"><div class="cf-i"><img src="data:image/jpeg;base64,'+POSTER+'" alt="'+esc(en?c.en:c.th)+'" loading="lazy"></div>'+
@@ -1478,7 +1480,7 @@ function coursesPage(){
     const cs=C.filter(c=>c.lv===lv); if(!cs.length) return;
     h+='<div class="grp"><h2>'+S.lv[lv][i()]+'</h2></div>';
     h+=cs.map(c=>{
-      const tt=(c.tt||[]).map(id=>PE.find(x=>x.id===id)).filter(Boolean);
+      const tt=(c.tt||["tv","vl"]).map(id=>PE.find(x=>x.id===id)).filter(Boolean);
       return '<div class="crow"><span class="cc">'+c.c+'</span>'+
         '<span class="ti"'+thattr()+'>'+esc(lang==="en"?c.en:c.th)+
           '<span class="alt" lang="'+(lang==="en"?"th":"en")+'">'+esc(lang==="en"?c.th:c.en)+'</span></span>'+
